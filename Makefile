@@ -45,7 +45,7 @@ fmt/imports:
 	@if [ -x "$$(command -v gci)" ]; then echo "run gci" ; gci write --skip-generated -s standard -s default -s "prefix(github.com/wmentor/go-magnetar)" . ; else echo "gci not found" ; fi
 
 fmt/sources:
-	@if [ -x "$$(command -v gofmpt)" ]; then echo "run gofmpt" ; gofumpt -l -w . ; else echo "gofmpt not found" ; fi
+	@if [ -x "$$(command -v gofumpt)" ]; then echo "run gofumpt" ; gofumpt -l -w . ; else echo "gofumpt not found" ; fi
 
 generate:
 	@if [ -x "$$(command -v mockery)" ]; then echo "run mockery..." ; mockery ; else echo "mockery not found" ; fi
